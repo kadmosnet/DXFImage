@@ -54,8 +54,9 @@ namespace DXFImage
             _dxfControl.BackColor = System.Drawing.Color.White;
             _dxfControl.ForeColor = System.Drawing.Color.Black;
 
-
+            _dxfControl.Regen();
             _dxfControl.ZoomCenter();
+            
             pictureBox1.Image = _dxfControl.Image;
 
             _dxfControl.Dispose();
@@ -90,7 +91,7 @@ namespace DXFImage
                     ent.Color = AciColor.FromCadIndex(7);
                 }
             }
-
+            _dxfControl.Regen();
             _dxfControl.ZoomCenter();
             pictureBox1.Image = _dxfControl.Image;
 
@@ -170,7 +171,7 @@ namespace DXFImage
                     ent.Color = new AciColor(newColor);
                 }
             }
-
+            _dxfControl.Regen();
             _dxfControl.ZoomCenter();
             pictureBox1.Image = _dxfControl.Image;
 
